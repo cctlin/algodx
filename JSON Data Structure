@@ -1,0 +1,52 @@
+Chief Complaint Data
+cc: "name"
+genqset: ccgenqset
+ddx: diag1, diag2, diag3
+
+CC-Specific General Question Set
+genQ1, genQ2
+
+General Question - filename = genQ1.json
+stem: "..."
+vars: var1, var2...
+
+DDx Targeted Questions Set 
+tarquestions: tarQ1, tarQ2
+
+Targeted Question - filename = tarQ1.json
+stem: "..."
+vars: var99, var100...
+
+DDx Data Set
+var1: 1.4
+var2: 1.3
+...
+var99: 1.2
+var100: 1.3
+
+Variable Display Option Key
+var1: Left
+var2: Right
+var3: Mild
+var4: Medium
+var5: Moderate
+
+
+Algorithm - out of date
+1. Choose the chief complaint
+2. Download the Chief Complaint Data
+3. Download the general questions specific for the Chief Complaint
+4. Download all the DDx Data Sets mentioned in the Chief Complaint Data set
+5. Ask the general questions using the question stems
+6. Store a list of the positive variables
+7. Run through each of the DDx Data Sets and sum up score for the variables
+8. Rank the DDx Data Sets based on score
+9. Load the Targeted Question Set for the top 5, eliminate duplicates
+10. Ask the cleaned up Targeted Question Set
+11. Add to the list of the positive variables
+12. Rank the DDx Data Sets based on score
+- Advanced: redo rank after each targeted question and redo the targeted questions to whittle down number of questions
+
+
+Questions
+Should I use generic variable numbers or give unique names? I'm thinking unique names for variables and questions would be better and less confusing for later on.

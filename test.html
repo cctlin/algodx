@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Test</h2>
+
+<p id="ccdata"></p>
+<p id="ccgenqset"></p>
+<p id="tarqset"></p>
+<p id="ddxdataset"></p>
+<p id="tarq"></p>
+<p id="genq"></p>
+<p id="varkey"></p>
+
+<script src = "ccdata.js"> </script>
+<script src = "ccgenqset.js"> </script>
+<script src = "tarqset.js"> </script>
+<script src = "ddxdataset.js"> </script>
+<script src = "tarq.js"> </script>
+<script src = "genq.js"> </script>
+<script src = "varkey.js"> </script>
+
+<script>
+var ccdataobj = JSON.parse(ccdatajson);
+var ccgenqsetobj = JSON.parse(ccgenqsetjson);
+var tarqsetobj = JSON.parse(tarqsetjson);
+var ddxdatasetobj = JSON.parse(ddxdatasetjson);
+var tarqobj = JSON.parse(tarqjson);
+var genqobj = JSON.parse(genqjson);
+var varkeyobj = JSON.parse(varkeyjson);
+
+document.getElementById("ccdata").innerHTML =
+ccdataobj.cc + "<br>"+
+ccdataobj.genqset + "<br>"+
+ccdataobj.ddx;
+
+document.getElementById("ccgenqset").innerHTML =
+ccgenqsetobj[0] + "<br>"+
+ccgenqsetobj[1];
+
+document.getElementById("tarqset").innerHTML =
+tarqsetobj[0] + "<br>"+
+tarqsetobj[1];
+
+document.getElementById("ddxdataset").innerHTML =
+ddxdatasetobj.var1 + "<br>"+
+ddxdatasetobj.var2 ;
+
+document.getElementById("tarq").innerHTML =
+tarqobj.stem + "<br>"+
+tarqobj.vars ;
+
+document.getElementById("genq").innerHTML =
+genqobj.stem + "<br>"+
+genqobj.vars ;
+
+document.getElementById("varkey").innerHTML =
+varkeyobj.var1 + "<br>"+
+varkeyobj.var2 ;
+
+</script>
+
+</body>
+</html>
